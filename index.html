@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      //pagetop
+      $(function () {
+        var topBtn = $(".pagetop");
+        topBtn.hide();
+        //スクロールが500に達したらボタン表示
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 1000) {
+            //ボタンの表示方法
+            topBtn.fadeIn();
+          } else {
+            //ボタンの非表示方法
+            topBtn.fadeOut();
+          }
+        });
+        //クリックした先のURL
+        topBtn.click(function () {
+          $("https://www.google.com/?hl=ja").animate(
+            {
+              scrollTop: 0,
+            },
+            500
+          );
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/01.__0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/02__0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/03__0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/04.__0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/05.__0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/06.__0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="margin0 original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/voice.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="bottom-space original-lp-container">
+          <img
+            width="auto"
+            height="auto"
+            class="original--lp-image"
+            loading="lazy"
+            src="images/FAQ_0.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <script type="text/javascript" src="js/scroll-btn.js"></script>
+
+      <section class="pagetop">
+        <div class="margin0 original-lp-container stick ctaBtn">
+          <a
+            href="https://mugn-lp.com/products/%E3%81%8A%E8%A9%A6%E3%81%97-mugn-3%E7%82%B9%E3%82%BB%E3%83%83%E3%83%88"
+          >
+            <image src="images/cta-btn.webp" />
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
