@@ -1,0 +1,65 @@
+.body {
+    margin: 0px 0px;
+}
+
+.original-lp-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+}
+
+.original--lp-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+.margin0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.bottom-space {
+    margin-top: 0px;
+    margin-bottom: 250px;
+}
+
+.ctaBtn {
+    display: block;
+    margin: auto;
+    animation: poyon 2s infinite
+}
+
+@keyframes poyon {
+    0% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    15% {
+        transform: scale(0.95, 0.95) translate(0%, 0%);
+    }
+
+    30% {
+        transform: scale(1.05, 1.05) translate(0%, 0%);
+    }
+
+    50% {
+        transform: scale(0.95, 0.95) translate(0%, 0%);
+    }
+
+    70% {
+        transform: scale(1.05, 1.05) translate(0%, 0%);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+}
+
+.stick {
+    position: fixed;
+    right: 0;
+    left: 40px;
+    bottom: 0;
+    z-index: 9999999;
+}
