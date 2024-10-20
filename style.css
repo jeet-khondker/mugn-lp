@@ -1,65 +1,240 @@
 .body {
-    margin: 0px 0px;
+  margin: 0px 0px;
+}
+
+main {
+  padding-bottom: 150px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .original-lp-container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
 }
 
 .original--lp-image {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .margin0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .bottom-space {
-    margin-top: 0px;
-    margin-bottom: 250px;
+  margin-top: 0px;
+  margin-bottom: 250px;
 }
 
 .ctaBtn {
-    display: block;
-    margin: auto;
-    animation: poyon 2s infinite
+  display: block;
+  margin: auto;
+  animation: poyon 2s infinite;
 }
 
 @keyframes poyon {
-    0% {
-        transform: scale(1.0, 1.0) translate(0%, 0%);
-    }
+  0% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
 
-    15% {
-        transform: scale(0.95, 0.95) translate(0%, 0%);
-    }
+  15% {
+    transform: scale(0.95, 0.95) translate(0%, 0%);
+  }
 
-    30% {
-        transform: scale(1.05, 1.05) translate(0%, 0%);
-    }
+  30% {
+    transform: scale(1.05, 1.05) translate(0%, 0%);
+  }
 
-    50% {
-        transform: scale(0.95, 0.95) translate(0%, 0%);
-    }
+  50% {
+    transform: scale(0.95, 0.95) translate(0%, 0%);
+  }
 
-    70% {
-        transform: scale(1.05, 1.05) translate(0%, 0%);
-    }
+  70% {
+    transform: scale(1.05, 1.05) translate(0%, 0%);
+  }
 
-    100% {
-        transform: scale(1.0, 1.0) translate(0%, 0%);
-    }
+  100% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
 }
 
 .stick {
-    position: fixed;
-    right: 0;
-    left: 40px;
-    bottom: 0;
-    z-index: 9999999;
+  position: fixed;
+  right: 0;
+  vertical-align: middle;
+  left: 40px;
+  bottom: 0;
+  z-index: 9999999;
+}
+
+#custom-chatbot {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  width: 300px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+#chat-header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+#chat-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+#chat-messages {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.message {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  max-width: 80%;
+}
+.bot-message {
+  float: left;
+}
+.user-message {
+  float: right;
+  background-color: #3498db;
+  color: #fff;
+}
+.timestamp {
+  font-size: 0.8em;
+  color: #888;
+  clear: both;
+  text-align: right;
+  padding: 5px 0;
+}
+#chat-options {
+  background-color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+#chat-options span {
+  display: block;
+  margin-bottom: 10px;
+  color: #888;
+}
+#option-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+#option-buttons button {
+  padding: 8px 20px;
+  background-color: #fff;
+  color: #3498db;
+  border: 1px solid #3498db;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+#option-buttons button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+#chat-toggle {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.typing-indicator {
+  padding: 10px 15px;
+  background-color: #e6e6e6;
+  border-radius: 18px;
+  width: fit-content;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9e9ea1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 4.2vw;
+  }
+
+  .stick {
+    left: 0;
+  }
+
+  #custom-chatbot {
+    bottom: 165px;
+  }
+
+  #chat-toggle {
+    bottom: 155px;
+    right: 25%;
+  }
+}
+
+/* Media query for Pixel 7 Pro and similar sized devices */
+@media screen and (max-width: 480px) and (max-height: 1040px) {
+  #chat-toggle {
+    bottom: 200px;
+  }
+  #custom-chatbot {
+    bottom: 200px;
+  }
 }
